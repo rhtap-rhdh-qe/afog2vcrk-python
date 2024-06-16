@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: afog2vcrk-python 
+  description: Secure Supply Chain Example for Python is an interpreted,  object-oriented, high-level programming language with dynamic semantics. This sample demonstrates software supply chain security functionalty using an advanced continuous integration pipeline covering building, CVE scanning, security scanning, signatures, attestations, SLSA provenance and SBOM along with Gitops-based continuous deployment.   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=afog2vcrk-python  
+    janus-idp.io/tekton: afog2vcrk-python 
+    backstage.io/kubernetes-id: afog2vcrk-python 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: rhtap_qe/rhtap-qe
+  tags: ["python", "pip", "flask", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
